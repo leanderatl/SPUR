@@ -1,0 +1,72 @@
+# ==========================================
+# SPUR
+# Git ignore rules
+# ==========================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Build / distribution
+build/
+dist/
+*.egg-info/
+*.spec
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE / editors
+.vscode/
+.idea/
+
+# Operating systems
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================================
+# SPUR runtime data
+# ==========================================
+
+# Application state
+data/
+*.state.json
+state.json
+estado.json
+
+# Logs
+logs/
+*.log
+
+# Local configuration
+config/
+*.local.json
+*.local.toml
+*.local.yaml
+*.local.yml
+.env
+.env.*
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# ==========================================
+# Sensitive / operational material
+# ==========================================
+
+private/
+secrets/
+operational/
