@@ -32,3 +32,14 @@ def test_state_repository_saves_and_loads_state(tmpdir):
     assert loaded_content.name == "video_001.mp4"
     assert loaded_content.path == "/programacao/dia_01/video_001.mp4"
     assert loaded_content.size == 500000
+
+def test_state_repository_returns_empty_state_when_file_does_not_exist(tmpdir):
+    state_file = tmpdir.join("state.json")
+
+    repository = StateRepository()
+
+    loaded_state = repository.load(
+        str(state_file)
+    )
+
+    assert len(loaded_state) == 0

@@ -19,8 +19,11 @@ class StateRepository:
             json.dump(data, file)
 
     def load(self, file_path):
-        with open(file_path, "r") as file:
-            data = json.load(file)
+        try:
+            with open(file_path, "r") as file:
+                data = json.load(file)
+        except FileNotFoundError:
+            return State([])
 
         contents = []
 
